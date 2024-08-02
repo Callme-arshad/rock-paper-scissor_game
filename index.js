@@ -16,16 +16,19 @@ const genCompChoice = () => {
 
 const draw = () => {
     msg.innerText = "Match Draw, play again";
+    msg.style.backgroundColor = "#081b31"
 };
 
 const showWinner = (userWin, compChoice) => {
     choose.innerText = "Computer chose: " + compChoice;
     if (userWin) {
-        msg.innerText = "Congrats, you win!";
+        msg.innerText = "you win!";
+        msg.style.backgroundColor = "green"
         userScore += 1;
         user_score.innerText = userScore;
     } else {
-        msg.innerText = "Oh no, you lose!";
+        msg.innerText = "you lose!";
+        msg.style.backgroundColor = "red"
         compScore += 1;
         comp_score.innerText = compScore;
     }
